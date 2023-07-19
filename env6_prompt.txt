@@ -1,0 +1,25 @@
+This is prompt for paid version of ChatGPT v 4 with Code Interpreter plugin.
+============================================================================
+Sure, here's a detailed prompt to generate the above code:
+
+"Can you please write a Python program that performs the following steps:
+
+1. **Imports**: Import the necessary libraries including numpy for array operations, PIL for image processing, argparse for command line argument parsing, datetime for timestamp creation, os for file path operations, and matplotlib.pyplot for image display.
+
+2. **Divide Blend Function**: Define a function to apply a divide blend mode to an image. This function should take a NumPy array representing the image and a blend color as inputs. It should divide each pixel in the image by the blend color, scale the result by 255, and clip the result between 0 and 255 to ensure valid pixel values.
+
+3. **Invert Image Function**: Define a function to invert an image. This function should take a NumPy array representing the image as input and return an image with each pixel value subtracted from 255.
+
+4. **Brightness Calculation Function**: Define a function to calculate the brightness of each pixel in an image. This function should take a NumPy array representing the image as input. It should compute the dot product of the pixel values and the vector [0.3333, 0.3333, 0.3334] to get a single brightness value for each pixel.
+
+5. **Enhanced White Balance Function**: Define a function to apply an enhanced white balance to an image. This function should take a NumPy array representing the image and bright and dark percentiles as inputs. It should calculate the brightness of each pixel using the previously defined function and find the bright and dark thresholds using the given percentiles. It should then calculate the maximum and minimum RGB values among the darkest and brightest pixels, compute scale factors and offsets for white balancing, and apply them to the image.
+
+6. **Auto Contrast Function**: Define a function to apply auto contrast to an image. This function should take a NumPy array representing the image and a clip percent as inputs. It should convert the image to grayscale, calculate a histogram and cumulative distribution function (CDF) of the pixel values, find the lower and upper limits for clipping based on the clip percent, compute a scale factor and offset for auto contrast, and apply them to the image.
+
+7. **Image Saving Function**: Define a function to save an image to a file with a time-stamped name derived from a base name and a suffix. This function should take a NumPy array representing the image, a base name, and a suffix as inputs. It should create a timestamp, form a filename using the base name, suffix, and timestamp, and save the image to the file.
+
+8. **Image Display Function**: Define a function to display an image with a title. This function should take a NumPy array representing the image and a title as inputs. It should use matplotlib.pyplot to display the image with the title.
+
+9. **Main Program**: In the main part of the program, define an argument parser to take an image file path and a flag for auto contrast from the command line. Load the image from the file and convert it to a NumPy array. Apply the divide blend mode with a specified blend color, invert the image, apply the enhanced white balance with specified bright and dark percentiles, and save and display the white balanced image. If the auto contrast flag is set, apply the auto contrast to the image, and save and display the auto contrast image. Print debug statements for each critical step."
+
+The above code applies the divide blend mode first to modify the image color, then inverts the image to achieve a specific artistic effect, applies white balance to adjust the color balance, and finally applies auto contrast to enhance the image contrast. The image saving and display functions are separated to allow for the possibility of saving the image without displaying it, or vice versa. The use of command line arguments allows the user to easily specify the input image and whether to apply auto contrast. The use of NumPy arrays for image operations enables efficient computation. The use of the PIL library for image loading and saving provides compatibility with a wide range of image formats.
